@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
     android:layout_height="wrap_content">
 
@@ -11,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Add a new shopping item"
+        android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/dialogItemName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,26 +19,28 @@
 
     <EditText
         android:id="@+id/dialogItemName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:textColor="@color/white"
         android:hint="Name"
+        app:layout_constraintEnd_toStartOf="@id/dialogItemAmount"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <EditText
         android:id="@+id/dialogItemAmount"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="number"
-        android:text="Amount"
+        android:textColor="@color/white"
         android:hint="Amount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dialogItemName"
@@ -50,8 +52,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="CANCEL"
+        android:textColor="@color/white"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/dialogAdd"
         app:layout_constraintTop_toBottomOf="@+id/dialogItemAmount" />
 
@@ -61,8 +66,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="ADD"
         android:textSize="18sp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dialogItemAmount" />
 </androidx.constraintlayout.widget.ConstraintLayout>
